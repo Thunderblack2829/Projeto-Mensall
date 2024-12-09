@@ -1,0 +1,236 @@
+/* Estilo para o dropdown */
+#dropdown-content {
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+#dropdown-btn {
+  background-color: #656565; /* Cor de fundo consistente */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 20px; /* Tamanho do botão */
+  cursor: pointer; /* Estilo do cursor */
+  font-size: 14px; /* Tamanho do texto */
+  z-index: 1000; /* Garantir que o botão esteja acima */
+}
+
+#dropdown-btn:hover {
+  background-color: #555; /* Cor de fundo no hover */
+}
+
+#dropdown-content li {
+  list-style-type: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#dropdown-content li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+/* Container para as colunas */
+#column-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color: #848484; /* Fundo geral do container */
+  overflow-x: auto; /* Permite rolagem horizontal */
+}
+
+/* Estilo para cada coluna */
+.column {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Bordas arredondadas */
+  width: 250px; /* Largura fixa */
+  min-height: 400px; /* Altura mínima */
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Título da coluna */
+.column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333; /* Texto escuro */
+}
+
+/* Estilo para a lista de tarefas dentro das colunas */
+.tasks-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tasks-container li {
+  background-color: #e0e0e0;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Resolução para telas menores */
+@media (max-width: 600px) {
+  #column-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%; /* Coluna ocupa 100% da largura em telas pequenas */
+  }
+}
+
+/* Adicionando a definição de font-family no body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Estilo para o formulário */
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-container h2 {
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.form-container input, .form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.form-container button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  font-size: 16px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+/* Estilo para o botão */
+.dark-mode-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.dark-mode-btn:hover {
+  background-color: #555;
+}
+
+/* Estilos gerais do modo escuro */
+body.dark-mode {
+  background-color: #7f7f7f;
+  color: #e0e0e0;
+}
+
+body.dark-mode h2, 
+body.dark-mode h3 {
+  color: #f4f4f4;
+}
+
+body.dark-mode .form-container {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .column {
+  background-color: #2c2c2c;
+  border-color: #ffffff;
+}
+
+body.dark-mode .tasks-container li {
+  background-color: #858484;
+  color: #fff;
+}
+
+body.dark-mode #dropdown-content {
+  background-color: #ffffff;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode #dropdown-content li:hover {
+  background-color: #655f5f;
+  color: #806f6f; /* Texto branco no hover */
+}
+
+.logout-btn {
+  position: fixed; /* Fixa o botão na tela */
+  top: 20px; /* Distância do topo */
+  right: 150px; /* Distância da borda direita */
+  padding: 10px 20px;
+  background-color: #656565; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto branco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  font-size: 14px; /* Tamanho do texto */
+}
+
+
